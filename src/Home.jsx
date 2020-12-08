@@ -47,10 +47,11 @@ const data = [
   
   <>
     
-    
+      
+    //Grid Menu
    <FlexBox style={{...spacing.sapUiLargeMarginBegin }}>
     
-       <Grid  style={{ width: "500px", ...spacing.sapUiContentPadding , ...spacing.sapUiLargeMargin, ...spacing.sapUiLargeMarginBegin}} position="Center">
+   <Grid  style={{ width: "500px", ...spacing.sapUiContentPadding , ...spacing.sapUiLargeMargin, ...spacing.sapUiLargeMarginBegin}} position="Center">
   <div>
     <Avatar  image="customer.png" style={spacing.sapUiContentPadding} size="M" /><Text style={spacing.sapUiContentPadding} >Client Info</Text>
   </div> 
@@ -66,7 +67,6 @@ const data = [
  <div>
     <Avatar image="plants.png" style={spacing.sapUiContentPadding} size="M" /><Text style={spacing.sapUiContentPadding} >Veg. Health</Text>
   </div>
-  
   <div>
     <Avatar image="data.png" style={spacing.sapUiContentPadding} size="M" /><Text style={spacing.sapUiContentPadding} >Analytics</Text>
   </div>
@@ -77,7 +77,9 @@ const data = [
     <Avatar image="weather.png" style={spacing.sapUiContentPadding} size="M" /><Text style={{...spacing.sapUiContentPadding, marginLeft: '0.5em' }} >Weather</Text>
   </div>
 </Grid>
-
+  
+     
+     //Multiline chart
 <Card
         heading="Detected Fault Trend"
         style={{ width: "500px", ...spacing.sapUiContentPadding , ...spacing.sapUiMediumMargin}}
@@ -109,7 +111,7 @@ const data = [
     
      
     
-      
+      //Stacked Bar Chart
   
 <AnalyticalCard   style={{ width: "500px" ,...spacing.sapUiLargeMarginEnd}} header={<AnalyticalCardHeader arrowIndicator="Up" counterState="Success" description="MENA Region" deviation="+65.44%" indicatorState="Success"   title="Asset Health" unit="Unit" value="10" valueState="Success"/>}>
   
@@ -133,6 +135,8 @@ const data = [
 
       </AnalyticalCard>
 
+      
+        //Notifications
       <Card
         heading="Fault ID"
         subtitle="List"
