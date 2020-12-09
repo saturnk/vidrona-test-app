@@ -34,31 +34,31 @@ export function Home(props) {
       name: "Jan",
       critical: 400,
       healthy: 240,
-      amt: 240,
+      int: 240,
     },
     {
       name: "Feb",
       critical: 300,
       healthy: 138,
-      amt: 220,
+      int: 220,
     },
     {
       name: "Mar",
       critical: 200,
       healthy: 980,
-      amt: 229,
+      int: 229,
     },
     {
       name: "Apr",
       critical: 280,
       healthy: 308,
-      amt: 200,
+      int: 200,
     },
     {
       name: "May",
       critical: 180,
       healthy: 480,
-      amt: 281,
+      int: 281,
     },
   ];
 
@@ -124,7 +124,7 @@ export function Home(props) {
             <Text style={spacing.sapUiContentPadding}>Veg. Health</Text>
           </div>
 
-          <div>
+          <div >
             <Avatar
               image="data.png"
               style={spacing.sapUiContentPadding}
@@ -164,6 +164,7 @@ export function Home(props) {
             width: "500px",
             ...spacing.sapUiContentPadding,
             ...spacing.sapUiMediumMargin,
+            
           }}
           headerInteractive
         >
@@ -190,6 +191,12 @@ export function Home(props) {
               stackId="a"
               stroke=" #4caf50"
             />
+             <Line
+              type="monotone"
+              dataKey="int"
+              stackId="a"
+              stroke=" #1565C0"
+            />
           </LineChart>
         </Card>
       </FlexBox>
@@ -199,9 +206,10 @@ export function Home(props) {
         wrap={FlexBoxWrap.Wrap}
       >
         <AnalyticalCard
-          style={{ width: "500px", ...spacing.sapUiLargeMarginEnd }}
+          style={{ width: "500px", ...spacing.sapUiLargeMarginEnd,  }}
           header={
             <AnalyticalCardHeader
+            
               arrowIndicator="Up"
               counterState="Success"
               description="MENA Region"
@@ -232,6 +240,7 @@ export function Home(props) {
             <Legend />
             <Bar barSize={25} dataKey="critical" stackId="a" fill="#f44336" />
             <Bar dataKey="healthy" stackId="a" fill=" #4caf50" />
+            <Bar dataKey="int" stackId="a" fill=" #1565C0" />
           </BarChart>
         </AnalyticalCard>
 
@@ -243,10 +252,11 @@ export function Home(props) {
             height: "350px",
             ...spacing.sapUiContentPadding,
             ...spacing.sapUiMediumMargin,
+            
           }}
           headerInteractive
         >
-          <List>
+          <List >
             <StandardListItem
               info="T&D Lines Mohindengarg"
               infoState={ValueState.Error}
